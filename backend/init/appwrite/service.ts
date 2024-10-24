@@ -1,4 +1,4 @@
-import conf from "../../CONFIG/conf";
+import conf from "../CONFIG/conf";
 
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
@@ -67,13 +67,17 @@ export class DBService {
       { content }
     );
   }
-    subscribeToDocumentUpdates(documentId: string, callback: (data: any) => void) {
+  subscribeToDocumentUpdates(
+    documentId: string,
+    callback: (data: any) => void
+  ) {
     this.client.subscribe(
-      [`databases.${conf.appwriteDatabaseID}.collections.${conf.appwriteCollectionID}.documents.${documentId}`],
+      [
+        `databases.${conf.appwriteDatabaseID}.collections.${conf.appwriteCollectionID}.documents.${documentId}`,
+      ],
       callback
     );
   }
-
 }
 
 const databaseServices = new DBService();

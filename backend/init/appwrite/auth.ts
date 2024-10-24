@@ -1,4 +1,4 @@
-import conf from "../../CONFIG/conf.ts";
+import conf from "../../../syncPadFrontEnd/CONFIG/conf.ts";
 import { Client, Account, ID } from "appwrite";
 
 export class AuthServices {
@@ -53,7 +53,7 @@ export class AuthServices {
   }
   async logout() {
     try {
-      return  await this.account.deleteSessions();
+      return await this.account.deleteSessions();
     } catch (error) {
       throw error;
     }
