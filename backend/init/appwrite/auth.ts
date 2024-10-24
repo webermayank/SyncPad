@@ -1,4 +1,4 @@
-import conf from "../../../syncPadFrontEnd/CONFIG/conf.ts";
+import conf from "../CONFIG/conf";
 import { Client, Account, ID } from "appwrite";
 
 export class AuthServices {

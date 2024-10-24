@@ -1,5 +1,6 @@
-import conf from "../CONFIG/conf.ts";
+
 import databaseServices from "../../backend/init/appwrite/service.ts";
+import conf from "../../backend/init/CONFIG/conf.ts";
 import MainEditor from "./components/editor/MainEditor.tsx";
 import "./App.css";
 
